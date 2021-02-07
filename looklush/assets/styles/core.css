@@ -89,6 +89,10 @@ progress {
   display: inline-block;
   vertical-align: baseline;
 }
+input,
+textarea {
+  border-radius: 0;
+}
 button {
   background: none;
   border: 0;
