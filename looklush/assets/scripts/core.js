@@ -1,10 +1,14 @@
 var nav,
-    menu,
-    menuButton;
+menu,
+menuButton;
 
 nav        = document.querySelector('nav');
 menu       = document.querySelector('.menu');
 menuButton = document.querySelector('.menu-button');
+
+
+///////////////////////////////
+// function to set nav to dark
 
 window.onscroll = function () {
   nav = document.querySelector('nav');
@@ -17,11 +21,17 @@ window.onscroll = function () {
   }
 }
 
+//////////////////////////////////
+// function to set nav to visible
+
 menuButton.onclick = function() {
   if (!menu.classList.contains('visible')) {
     menu.classList.add('visible');
   }
 }
+
+/////////////////////////////////
+// function to toggle mobile nav
 
 document.addEventListener('click', function (element) {
   element = element.target;
@@ -34,3 +44,8 @@ document.addEventListener('click', function (element) {
     }
   }
 });
+
+///////////////////////////////////////
+// function to handle links in web app
+
+(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")
