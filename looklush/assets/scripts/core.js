@@ -1,7 +1,9 @@
-var nav,
+var a,
+nav,
 menu,
 menuButton;
 
+a          = document.getElementsByTagName('a');
 nav        = document.querySelector('nav');
 menu       = document.querySelector('.menu');
 menuButton = document.querySelector('.menu-button');
@@ -35,7 +37,6 @@ menuButton.onclick = function() {
 
 document.addEventListener('click', function (element) {
   element = element.target;
-  console.log(element);
   if (menu.classList.contains('visible')) {
     if (!element.parentElement.classList.contains('menu')
     &&  !element.parentElement.parentElement.classList.contains('menu')
