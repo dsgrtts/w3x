@@ -445,7 +445,7 @@ footer .sole {
     width: 100%;
     min-height: 400px;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto!important;
     padding-top: 20vh;
     padding-bottom: 20vh;
     display: block;
