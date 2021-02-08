@@ -8,7 +8,7 @@ menuButton = document.querySelector('.menu-button');
 
 window.onscroll = function () {
   nav = document.querySelector('nav');
-  if (window.scrollY > 250) {
+  if (window.scrollY > 50) {
     if (!nav.classList.contains('dark')) {
       nav.className += ' dark';
     }

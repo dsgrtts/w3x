@@ -135,6 +135,9 @@ h4 { font-size: 1.5em; }
 p {
   line-height: 1.6em;
 }
+sup {
+  position: absolute;
+}
 .light {
   font-weight: 200;
 }
@@ -227,6 +230,10 @@ main h4 {
 .intro h3 {
   margin-bottom: 5px;
 }
+.intro.dark {
+  background-color: #000;
+  color: #fff;
+}
 .blocks {
   margin-bottom: -3px;
 }
@@ -239,13 +246,21 @@ main h4 {
 .block {
   width: 50.1%;
   height: 400px;
-  margin: -0.18965em -0.15965em;
+  /* margin: -0.18965em -0.15965em; */
+  margin: 0 -0.15965em 0;
   padding-top: 250px;
+  vertical-align: top;
   overflow: hidden;
   display: inline-block;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+}
+.block:nth-child(odd) {
+  margin-left: 0;
+}
+.block:nth-child(even) {
+  margin-left: -5px;
 }
 .block h3 {
 }
@@ -273,9 +288,11 @@ main h4 {
 .block.two   { background-image: url('../images/block-2.jpg') }
 .block.three { background-image: url('../images/block-3.jpg') }
 .block.four  { background-image: url('../images/block-4.jpg') }
-.block.six  { background-image: url('../images/block-6.jpg') }
+.block.six   { background-image: url('../images/block-6.jpg') }
 
 footer {
+  z-index: 1;
+  position: relative;
   padding: 70px 0 30px;
   background-color: #000;
   vertical-align: top;
@@ -345,6 +362,8 @@ footer .sole {
   .swiper-slide {
     min-height: 300px;
     height: 50vh;
+  }
+  footer .half.righted img {
   }
 }
 
