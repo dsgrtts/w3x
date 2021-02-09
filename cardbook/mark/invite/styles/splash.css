@@ -1,0 +1,16 @@
+body {
+  background-color: #000;
+  transition-delay: 4s;
+}
+.splash {
+  transform: translateY(0vh);
+  background-size: 100px;
+}
+.brand-logo,
+.brand-name {
+  opacity: 1;
+}
+.unload .splash {
+  transition-delay: 4s;
+  opacity: 0;
+}

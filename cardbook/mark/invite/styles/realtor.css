@@ -1,0 +1,89 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  opacity: 1;
+  visibility: visible;
+  filter: blur(0px);
+  font-family: sans-serif;
+}
+.wall {
+  transition: all 1s ease;
+  opacity: 1;
+  background-position: center 0;
+}
+.card {
+  top: 8vh;
+  width: 80%;
+  max-width: 291px;
+  min-height: 95vh;
+  margin: 0 auto;
+  position: relative;
+  background-color: #fff;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  box-shadow: 0 50px 50px rgba(0,0,0,.05);
+  text-align: center;
+}
+.card.loaded {
+  top: 5vh;
+  opacity: 1;
+  transition-delay: 1.8s;
+  transform: translateY(0%);
+}
+.card .head {
+  height: 170px;
+  margin-bottom: 25px;
+  background-image: url('../images/bgs/markholt-realtor-1.png');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: contain;
+}
+form.recipient input {
+  width: 85%;
+  margin: 15px auto 0;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  padding: 5px 0 15px;
+  outline: none;
+  border-radius: 0;
+  border-color: transparent;
+  border-bottom: 2px solid #ddd;
+  font-size: 15px;
+}
+.card h1 {
+  margin: 0 0 0;
+  padding-bottom: 15px;
+  font-size: 22px;
+  color: #333;
+}
+.card p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15px;
+  line-height: 1.4em;
+  color: #777;
+}
+.skip-button,
+.add-button {
+  margin: 35px auto 0;
+  max-width: 100px;
+  display: block;
+  padding: 13px 35px;
+  background-color: #222;
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 16px;
+  color: #fff;
+}
+.skip-button {
+  box-shadow: none;
+  background: #fff;
+  color: #333;
+}
+.card .feet {
+  margin-top: 30px;
+}

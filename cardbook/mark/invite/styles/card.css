@@ -1,0 +1,91 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  transition: all 2s ease;
+  opacity: 1;
+  overflow: hidden;
+  visibility: visible;
+  font-family: sans-serif;
+}
+.wall {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2F7I0fP5W.jpg&f=1&nofb=1');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.card {
+  top: 8vh;
+  opacity: 1;
+  width: 80%;
+  max-width: 330px;
+  height: 92vh;
+  margin: 0 auto;
+  position: relative;
+  transform: translateY(0%);
+  background-color: #fff;
+  border-radius: 16px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden;
+  /* box-shadow: 0 50px 50px rgba(0,0,0,.2); */
+  box-shadow: 0 50px 50px rgba(0,0,0,1);
+  text-align: center;
+}
+.card .head {
+  height: 170px;
+  margin-bottom: 30px;
+  /* box-shadow: 50px 0 50px rgba(0,0,0,1); */
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/swaptd.appspot.com/o/Cards%2FImage%20from%20iOS%20(1).jpg?alt=media&token=6e08f3ed-5623-4904-9d2a-56ee70752527');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-size: contain;
+}
+/* .card .photo {
+  top: 30px;
+  width: 120px;
+  height: 120px;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 100px;
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/swaptd.appspot.com/o/Cards%2FImage%20from%20iOS%20(1).jpg?alt=media&token=6e08f3ed-5623-4904-9d2a-56ee70752527');
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 330px;
+} */
+.card h1 {
+  margin: 10px 0 0;
+  padding-bottom: 15px;
+  font-size: 26px;
+  color: #333;
+}
+.card p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 15.5px;
+  line-height: 1.6em;
+  color: #777;
+}
+.card .add-button {
+  margin: 25px auto 0;
+  max-width: 100px;
+  display: block;
+  padding: 12px 30px;
+  background-color: #D30008;
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+  border-radius: 100px;
+  text-decoration: none;
+  font-size: 15px;
+  color: #fff;
+}
+.card .feet {
+  margin-top: 30px;
+}

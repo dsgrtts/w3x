@@ -1,0 +1,69 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+body {
+  visibility: visible;
+  font-family: sans-serif;
+}
+.install-steps {
+  margin: 0 auto 0;
+  display: block;
+  text-align: center;
+}
+.install-steps h1 {
+  z-index: 1;
+  margin: 0;
+  padding-top: 50px;
+  padding-bottom: 10px;
+  position: relative;
+  background-color: #fff;
+}
+.steps-list {
+  z-index: 1;
+  margin: 0 auto;
+  position: relative;
+  display: inline-block;
+  counter-reset: step-counter;
+  list-style: none;
+  background-color: #fff;
+}
+.install-steps
+.arrow-down {
+  z-index: 0;
+  bottom: 50px;
+  width: 1px;
+  height: 100%;
+  position: absolute;
+  background-color: #ccc;
+  display: inline-block;
+}
+.arrow-down:after {
+  bottom: -15px;
+  left: -8px;
+  position: absolute;
+  border: 8px solid transparent;
+  border-top: 8px solid #ccc;
+  display: block;
+  content: ''
+}
+.steps-list li {
+  margin: 20px 0;
+  text-align: left;
+  font-size: 18px;
+}
+.steps-list li::before {
+  width: 32px;
+  height: 32px;
+  margin: 0 9px 0 0;
+  display: inline-block;
+  border-radius: 100px;
+  counter-increment: step-counter;
+  content: counter(step-counter);
+  background-color: black;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 32px;
+  color: #fff;
+}
