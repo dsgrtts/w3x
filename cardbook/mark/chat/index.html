@@ -330,6 +330,16 @@
       },
       speed: 500,
     });
+
+    document.onload = (function() {
+      document.ontouchmove = function(e) {
+        e.preventDefault();
+      }
+    });
+    document.querySelector('.chat-message-box').onfocus = function () {
+      window.scrollTo(0, 0);
+      document.body.scrollTop = 0;
+    }
   </script>
   </body>
 </html>
