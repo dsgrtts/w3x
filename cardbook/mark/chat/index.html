@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <title>Swiper demo</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1'>
+
+    <link rel='stylesheet' href='https://unpkg.com/swiper/swiper-bundle.min.css'>
+    <link rel='preconnect' href='https://fonts.gstatic.com'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap'>
+
+
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: 'Poppins', sans-serif;
+        font-size: 1.0em;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .head {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+        padding: 20px;
+        box-sizing: border-box;
+        position: fixed;
+        background-color: #eee;
+      }
+
+      .sender-display {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto;
+        position: relative;
+        border-radius: 100px;
+        background-color: #ddd;
+        background-image: url(display.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .sender-badge {
+        right: -5px;
+        bottom: -2px;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        background-image: url(logo-realtor.png);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .sender-name {
+        margin-top: 10px;
+        text-align: center;
+        font-size: 1.2em;
+        font-weight: 400;
+      }
+
+      .sender-number {
+        margin-top: 5px;
+        text-align: center;
+        font-size: .85em;
+        color: #999;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class='head'>
+      <div class='sender-display'>
+        <div class='sender-badge'></div>
+      </div>
+      <div class='sender-name'>Mark Holt</div>
+      <div class='sender-number'>(617) 519-6878 ></div>
+    </div>
+    <div class='swiper-container'>
+      <div class='swiper-wrapper'>
+        <div class='swiper-slide'>
+          <div class='chat-bubble-gray'>
+
+          </div>
+        </div>
+      </div>
+      <div class='swiper-pagination'></div>
+    </div>
+
+    <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
+
+    <script>
+      var swiper = new Swiper('.swiper-container', {
+        direction: 'vertical',
+        slidesPerView: 1,
+        spaceBetween: 30,
+        mousewheel: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+      },
+    });
+  </script>
+  </body>
+</html>
