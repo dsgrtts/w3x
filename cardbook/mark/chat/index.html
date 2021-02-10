@@ -18,12 +18,16 @@
       }
 
       body {
-        background: #eee;
+        background: #fff;
         font-family: 'Poppins', sans-serif;
         font-size: 1.0em;
         color: #000;
         margin: 0;
         padding: 0;
+      }
+
+      .icon {
+        width: 16px;
       }
 
       .head {
@@ -34,14 +38,26 @@
         padding: 20px;
         box-sizing: border-box;
         position: fixed;
-        background-color: #eee;
+        background-color: #0352CC;
+      }
+
+      .foot {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        width: 100%;
+        position: fixed;
+        box-sizing: border-box;
+        background-color: #f4f5f7;
       }
 
       .sender-display {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto;
+        width: 60px;
+        height: 60px;
+        float: left;
         position: relative;
+        display: inline-block;
         border-radius: 100px;
         background-color: #ddd;
         background-image: url(display.png);
@@ -53,30 +69,60 @@
       .sender-badge {
         right: -5px;
         bottom: -2px;
-        width: 30px;
-        height: 30px;
+        width: 18px;
+        height: 21px;
         position: absolute;
+        background-color: #0352cc;
         background-image: url(logo-realtor.png);
-        background-size: 80%;
+        background-size: 100%;
         background-repeat: no-repeat;
         background-position: center;
       }
 
-      .sender-name {
-        margin-top: 10px;
+      .sender-info {
+        top: 15px;
+        float: right;
+        position: relative;
+        display: inline-block;
+        padding-left: 10px;
         text-align: center;
-        font-size: 1.2em;
-        font-weight: 400;
+        font-size: 0.95em;
       }
 
-      .sender-number {
-        margin-top: 5px;
+      .sender-name {
+        top: 5px;
+        left: 20px;
+        margin-top: 10px;
+        padding-right: 15px;
+        position: relative;
+        display: inline-block;
+        float: left;
         text-align: center;
-        font-size: .85em;
-        color: #999;
+        font-weight: 400;
+        font-size: 1.1em;
+        color: #fff;
+      }
+
+      .sender-contact {
+        top: -5px;
+        width: 34px;
+        height: 34px;
+        margin-left: 10px;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        background-color: rgba(255,255,255,.2);
+        border-radius: 100px;
+        line-height: 31px;
+        /* border-left: 2px solid rgba(255,255,255,.2); */
+        color: rgba(255,255,255,.7);
+      }
+      .sender-contact img {
+        vertical-align: middle;
       }
 
       .swiper-container {
+        top: 100px!important;
         width: 100%;
         height: 100%;
         margin-left: auto;
@@ -93,14 +139,80 @@
         display: -ms-flexbox;
         display: -webkit-flex;
         display: flex;
-        -webkit-box-pack: center;
+        /* -webkit-box-pack: center;
         -ms-flex-pack: center;
         -webkit-justify-content: center;
         justify-content: center;
         -webkit-box-align: center;
         -ms-flex-align: center;
         -webkit-align-items: center;
-        align-items: center;
+        align-items: center; */
+
+      }
+
+      .chat-body {
+        padding: 20px;
+      }
+
+      .chat-bubble {
+        margin-bottom: 20px;
+        padding: 20px;
+        background-color: #f4f5f7;
+        border-radius: 10px;
+        border-top-left-radius: 0;
+        text-align: left;
+        font-size: .85em;
+        font-weight: 300;
+        line-height: 1.6em;
+        letter-spacing: .01em;
+        color: #091e42;
+      }
+
+      .chat-message-box {
+        left: 0;
+        right: 50px;
+        width: 100%;
+        padding: 20px;
+        padding-right: 70px;
+        box-sizing: border-box;
+        border: 0;
+        outline: none;
+        font-family: inherit;
+        font-size: 1.0em;
+        font-weight: 300;
+        line-height: 1.6em;
+        background-color: inherit;
+        color: #091e42;
+      }
+      .chat-send-button {
+        right: 18px;
+        bottom: 12px;
+        z-index: 2;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        position: absolute;
+        background-image: url(up.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px;
+        background-color: #0352CC;
+        border-radius: 100px;
+        outline: none;
+        border: 0;
+        color: #fff;
+      }
+      .chat-send-button:hover {
+        background-color: #0b3577;
+      }
+      .chat-send-button:after {
+        top: -15px;
+        left: -15px;
+        position: absolute;
+        display: block;
+        content: '';
+        width: 67px;
+        height: 65px;
       }
     </style>
   </head>
@@ -110,19 +222,95 @@
       <div class='sender-display'>
         <div class='sender-badge'></div>
       </div>
+
       <div class='sender-name'>Mark Holt</div>
-      <div class='sender-number'>(617) 519-6878 ></div>
+      <div class='sender-info'>
+        <div class='sender-contact'><a href='tel:617-519-6878'><img src='call.png' class='icon call' alt='phone'></a></div>
+        <!-- <div class='sender-contact'><a href='sms:617-519-6878'><img src='chat.png' class='icon chat' alt='chat'></a></div> -->
+      </div>
     </div>
+
     <div class='swiper-container'>
       <div class='swiper-wrapper'>
         <div class='swiper-slide'>
-          <div class='chat-bubble-gray'>
-
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              Hi, I’d love to help! First I want to add you to my cardbook.
+            </div>
+            <div class='chat-bubble chat-bubble-gray'>
+              What's your first name?
+            </div>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              And your last name?
+            </div>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              Nice to meet you {Full Name}. 😊 What's your mobile number?
+            </div>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              Great. What's your email address?
+            </div>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              Now let’s get moving!
+            </div>
+            <div class='chat-bubble chat-bubble-gray'>
+              Where are you moving from?
+            </div>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              Where to next?
+            </div>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              Ok, when?
+            </div>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              Have a budget?
+            </div>
+          </div>
+        </div>
+        <div class='swiper-slide'>
+          <div class='chat-body'>
+            <div class='chat-bubble chat-bubble-gray'>
+              Excellent! That's all that I need to know for now, thank you. 👍
+            </div>
           </div>
         </div>
       </div>
-      <div class='swiper-pagination'></div>
+      <!-- <div class='swiper-pagination'></div> -->
+      <div class='foot'>
+        <form>
+          <input name='message-box' class='chat-message-box' placeholder='Enter your message' data-slide='{name}' onkeypress='if( event.keyCode === 13 ){ this.value=""; }'>
+          <button type='submit' class='chat-send-button swiper-button-next'></button>
+        </form>
+      </div>
     </div>
+
 
     <script src='https://unpkg.com/swiper/swiper-bundle.min.js'></script>
 
@@ -136,6 +324,11 @@
           el: '.swiper-pagination',
           clickable: true,
       },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      speed: 500,
     });
   </script>
   </body>
