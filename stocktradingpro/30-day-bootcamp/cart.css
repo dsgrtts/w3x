@@ -1,0 +1,21 @@
+.text-gradient-green {
+  background: rgb(0,179,62);
+  background: -moz-radial-gradient(circle, rgba(0,179,62,1) 0%, rgba(0,254,153,1) 100%);
+  background: -webkit-radial-gradient(circle, rgba(0,179,62,1) 0%, rgba(0,254,153,1) 100%);
+  background: radial-gradient(circle, rgba(0,179,62,1) 0%, rgba(0,254,153,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00b33e",endColorstr="#00fe99",GradientType=1);
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 638px) {
+  .hero .text-congrats {
+    font-size: 1.1em;
+  }
+}
+
+@media (min-width: 639px) {
+  .hero h1 {
+    padding-top:40px!important;
+  }
+}
